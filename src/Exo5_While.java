@@ -9,7 +9,7 @@ public class Exo5_While {
         System.out.println("apres quelques minutes, l'appareil s'est verouille...");
         int codePinATester=0;
         int tentative = 0;
-        while (codePinATester!= codePin && tentative < 5) { //il n'y a que 5 tentative (0,1,2,3,4)
+        while (codePinATester!= codePin) { //il n'y a que 5 tentative (0,1,2,3,4)
             System.out.println("veuillez entrer le code de devereouillage");
             codePinATester = keyboardInput.nextInt();
             tentative = tentative + 1;// ou tentative++
@@ -17,14 +17,11 @@ public class Exo5_While {
                 System.out.println("correct");
             } else if (tentative <= 1) {
                 System.out.println("wrong, veuillez recommencer");
-            } else if (tentative == 2) {
-                System.out.println("wrong, vous avez encore 3 tentatives, veuillez recommencer");
-            } else if (tentative == 3) {
-                System.out.println("wrong, vous avez encore 2 tentatives, veuillez recommencer");
-            } else if (tentative == 4) {
-                System.out.println("wrong, vous avez encore 1 tentative, veuillez recommencer");
+            } else if (tentative >= 2 && tentative <=4) {
+                System.out.printf("wrong, vous avez encore %d tentatives, veuillez recommencer",5-tentative);
             } else {
                 System.out.println("wrong, vous êtes bloque");
+                break;
             }
         }
     }
