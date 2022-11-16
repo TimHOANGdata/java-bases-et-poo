@@ -15,7 +15,7 @@ public class Exo6_TableauxStatique {
         System.out.print("Veuillez définir le nombre des notes : ");
         do {
             nombreInput = keyboardInput.nextInt();
-            if (nombreInput < 0) {
+            if (nombreInput <= 0) {
                 System.out.println("le nombre doit >0, veuillez reessayer");
             } else {
                 System.out.printf("le nombre de notes est %d\n", nombreInput);
