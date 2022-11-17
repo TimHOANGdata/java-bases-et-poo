@@ -12,7 +12,7 @@ public class Exo8_HashMapRecherche {
         //2. Remplir le hashMap avec le nombre avec leurs occurences
         for (int nombre : nombres) {
             if (occurences.containsKey(nombre)) {
-                //containskey() permet de tester si un element exist dans le table ?
+                //containskey() permet de tester si un cle exist dans le table ?
                 int nombreMisAJour = occurences.get(nombre)+1;
                 occurences.replace(nombre, nombreMisAJour);
             } else {
