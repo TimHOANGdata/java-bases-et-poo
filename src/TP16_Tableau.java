@@ -12,29 +12,29 @@ import java.util.Scanner;
 public class TP16_Tableau {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("definir la taille du table 1");
+        System.out.println("definir la taille du table 1 ");
         int T1[] = new int[input.nextInt()];
-        System.out.println("definir la taille du table 2");
+        System.out.println("definir la taille du table 2 ");
         int T2[] = new int[input.nextInt()];
-        System.out.println("definir la taille du table 3");
+        System.out.println("definir la taille du table 3 ");
         int T3[] = new int[input.nextInt()];
         int somme = 0;
         for (int i =0; i<T1.length;i++){
-            System.out.printf("entrer valeur du %deme valeur de table 1",i+1);
+            System.out.printf("entrer valeur du %deme valeur de table 1 ",i+1);
             T1[i]=input.nextInt();
             if(T1[i]%3==0){
                 somme += T1[i];
             }
         }
         for (int j =0; j<T2.length;j++){
-            System.out.printf("entrer valeur du %deme valeur de table 2",j+1);
+            System.out.printf("entrer valeur du %deme valeur de table 2 ",j+1);
             T2[j]=input.nextInt();
             if(T2[j]%3==0){
                 somme += T2[j];
             }
         }
         for (int k =0; k<T3.length;k++){
-            System.out.printf("entrer valeur du %deme valeur de table 3",k+1);
+            System.out.printf("entrer valeur du %deme valeur de table 3 ",k+1);
             T3[k]=input.nextInt();
             if(T3[k]%3==0){
                 somme += T3[k];
