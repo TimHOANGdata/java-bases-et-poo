@@ -10,15 +10,17 @@ public class TP19_charString {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("entrez votre text");
-        String text = input.nextLine();
-        for(int i = 0; i< text.length();i++){
-            if(text.charAt(i)!=text.charAt(text.length()-1-i)){
-                System.out.printf("%s n'est un palindrome\n",text);
-                break;
-            }else{
-                System.out.printf("%s est un palindrome",text);
-                break;
-            }
+        String text2 = input.nextLine();
+        String text=text2.replaceAll("[^A-Z-a-z]","").toLowerCase();
+        String text1 = "";
+        for (int i = 0; i < text.length(); i++) {
+            char a = text.charAt(text.length() - i - 1);
+            text1 += a;
+        }
+        if(text.equals(text1)){
+            System.out.printf("%s est un palindrome",text);
+        }else{
+            System.out.printf("%s n'est pas un palindrome",text);
         }
     }
 }

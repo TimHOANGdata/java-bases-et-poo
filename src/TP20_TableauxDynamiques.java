@@ -13,7 +13,7 @@ public class TP20_TableauxDynamiques {
         ArrayList<String> tab = new ArrayList<>();
         System.out.println("entrez votre list de langages, entrez \'done\' pour finir");
         while (true) {
-            String langage = input.nextLine();
+            String langage = input.nextLine().toLowerCase();
             if (langage.equals("done")){
                 break;
             }
@@ -24,7 +24,7 @@ public class TP20_TableauxDynamiques {
         }
         System.out.println("entrez les langages que vous voulez retirer, entrez \'done\' pour finir");
         while (true){
-            String remove = input.nextLine();
+            String remove = input.nextLine().toLowerCase();
             if (remove.equals("done")){
                 break;
             }

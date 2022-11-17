@@ -8,8 +8,10 @@ public class TP18_charString {
         System.out.println("entrez votre text");
         String text = input.nextLine();
         System.out.println(text);
+        String text1 = "";
         for(int i = 0; i<text.length();i++){
-            System.out.printf("%c",text.charAt(text.length()-i-1));
-        }
+            char c =text.charAt(text.length()-i-1);
+            text1 += c;
+        }  System.out.println(text1);
     }
 }

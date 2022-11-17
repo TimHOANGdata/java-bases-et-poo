@@ -10,14 +10,14 @@ public class TP17_HashMap {
         Scanner input = new Scanner(System.in);
         System.out.println("entrez votre text");
         String text = input.nextLine();
-
-        for(int i=0; i< text.length();i++) {
+        String text1=text.replaceAll("[^A-Z-a-z]","").toLowerCase();
+        for(int i=0; i< text1.length();i++) {
             int occurence = 1;
-            if (tab.containsKey(text.charAt(i))) {
-                occurence = tab.get(text.charAt(i)) + 1;
-                tab.replace(text.charAt(i), occurence);
+            if (tab.containsKey(text1.charAt(i))) {
+                occurence = tab.get(text1.charAt(i)) + 1;
+                tab.replace(text1.charAt(i), occurence);
             } else {
-                tab.put(text.charAt(i), occurence);
+                tab.put(text1.charAt(i), occurence);
             }
         }
         System.out.println(tab);
