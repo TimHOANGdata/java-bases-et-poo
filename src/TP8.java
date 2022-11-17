@@ -7,7 +7,7 @@
 import java.util.Calendar;
 import java.util.Scanner;
 
-public class Age {
+public class TP8 {
     public static void main(String[] args) {
         Scanner keyboardInput = new Scanner(System.in);
         System.out.println("veuillez entrer votre age");
