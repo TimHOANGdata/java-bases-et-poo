@@ -1,4 +1,4 @@
-public class Point18_charStringCorrection {
+public class TP18_charStringCorrection {
     public static void main(String[] args) {
         String text="papy";
         String reversed="";

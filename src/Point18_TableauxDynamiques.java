@@ -1,5 +1,3 @@
-import com.sun.source.tree.ArrayAccessTree;
-
 import java.util.ArrayList;
 
 public class Point18_TableauxDynamiques {
