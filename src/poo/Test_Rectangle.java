@@ -1,6 +1,9 @@
 package poo;
 
-public class Test {
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Test_Rectangle {
     public static double calculSurface(double longeur, double largeur){
         return longeur*largeur;
     }
@@ -22,7 +25,14 @@ public class Test {
 
         //utiliser notre constructeur cree dans la class rectangle
         Rectangle rect =  new Rectangle(400,300);
-
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("pommes");
+        fruits.add("banane");
+        fruits.add("a");
+        fruits.add("b");
+        HashMap<Integer,String> identite = new HashMap<>();
+        identite.put(1,"abc");
+        identite.put(2,"dsd");
 //        rect.longeur = 250.5;
 //        rect.largeur = 120.7;
         // access direct to the contenu de l'extérieur
@@ -35,10 +45,14 @@ public class Test {
         rect.setLongeur(250);
         rect.setLargeur(120);
 
-        System.out.printf("Longeur : %.1f\n",rect.getLongeur());
-        System.out.printf("Largeur : %.1f\n",rect.getLargeur());
-        System.out.printf("Surface : %.1f\n", rect.calculSurface());
-        System.out.printf("perimetre : %.1f\n", rect.calculPerimetre());
+//        System.out.printf("Longeur : %.1f\n",rect.getLongeur());
+//        System.out.printf("Largeur : %.1f\n",rect.getLargeur());
+//        System.out.printf("Surface : %.1f\n", rect.calculSurface());
+//        System.out.printf("perimetre : %.1f\n", rect.calculPerimetre());
         // on n'a plus besoins de definir les parametre dans sout.
+
+        System.out.println(rect);
+        System.out.println(fruits);
+        System.out.println(identite);
     }
 }

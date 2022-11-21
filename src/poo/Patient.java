@@ -33,9 +33,8 @@ public class Patient {
     public double calculIMC(){
         return poid/taille;
     }
-    public String afficheDonnee(){
-        return String.format(System.out.printf("Patient: poid: %.1fkg - taille: %.1fm - IMC: %.1f\n",
-                poid,taille,calculIMC()).toString());
+    public String toString(){
+        return "Patient: poid: "+poid+"kg - taille: "+taille+ " - IMC: " +calculIMC();
     }
 
 

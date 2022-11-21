@@ -7,12 +7,12 @@
 
 package poo;
 import java.util.Scanner;
-public class TP1_Class_patient {
+public class Test_Patient {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Patient patient1 = new Patient(1.7,60);
 
-        patient1.afficheDonnee();
+        System.out.println(patient1);
 
         System.out.println("entrer la nouvelle taille du patient");
         patient1.setTaille(input.nextDouble());
@@ -20,7 +20,7 @@ public class TP1_Class_patient {
         System.out.println("entrer le nouveau poid du patient");
         patient1.setPoid(input.nextDouble());
 
-        patient1.afficheDonnee();
+        System.out.println(patient1);
 
     }
 }

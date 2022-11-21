@@ -5,7 +5,7 @@ public class Rectangle { // rectangle est un class
     private double longeur;
     private double largeur; // private permet d'interdir l'access de l'exterieur
 
-
+// ===============================================================================
     //Creer un constructeur permet de la class initialiser avec un autre valeur que
     // 0.0 null 0 ou false du constructor "par defaut par defaut"
     //nom du constructor = nom de la class
@@ -13,7 +13,26 @@ public class Rectangle { // rectangle est un class
         this.longeur = longeur;
         this.largeur = largeur;
     }
+    // ===============================================================================
+    public Rectangle(){ // constructeur par defaut
+        longeur = 10;
+        largeur = 5;
+    }
+    // si on définit le constructeur par default, le programme n'utilise pas le constructeur par default par default(cree par JVM)
+    // on peut avoir la surcharge- polymorphisme -different methode de meme nom, mais avec different signature
+    // ctd si on a Rectangle(avec parametre) => paramtre definir dans ()
+    // si on a Rectangle() => parametre longeur =10, largeur =5
 
+    // ===============================================================================
+
+    //constructeur de copie
+    public Rectangle(Rectangle rectangle){
+        this.longeur = rectangle.longeur;
+        this.largeur = rectangle.largeur;
+    }
+    //ce constructeur permet de copie uniquement les valeurs
+
+    // ===============================================================================
 
 
     // Methode permettre d'acceder aux variables privees : getters, setters
@@ -45,7 +64,7 @@ public class Rectangle { // rectangle est un class
     // dans la nomination, le variable should avoir le meme nom qu'attribute
     // => probleme de masqage
     // => use this.variable
-
+// ===============================================================================
     public double calculSurface(){ //methode lie a la class rectangle
         return longeur*largeur;
     }
@@ -53,6 +72,7 @@ public class Rectangle { // rectangle est un class
         return 2*(longeur+largeur);
     }
 
-
-
+    public String toString(){ //toString permet d'utiliser sout pour print directement String result
+        return String.format("longeur = %.1f\nlargeur = %.2f",longeur,largeur);
+    }
 }
