@@ -67,7 +67,7 @@ public class Souris {
     }
 
     public String toString() {
-        String donnees = "";
+        String donnees;
         if (this.clonee) {
             donnees = String.format("Une souris " + couleur + "[ clonée,] de " + age + " mois et pesant " + poid + " grammes");
         } else {
