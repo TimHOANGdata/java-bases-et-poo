@@ -1,23 +1,36 @@
 package Herritage;
 
-public class Guerrier extends Personnage {
-    private Arme arme;
+import java.util.ArrayList;
 
-    public Guerrier(String name, int dureeDeVie, Arme arme) {
+public class Guerrier extends Personnage implements EntiteVolant {
+    private ArrayList<Arme> armes;
+
+    public Guerrier(String name, int dureeDeVie){
         super(name,dureeDeVie);
-        this.arme = arme;
+    }
+    public Guerrier(String name, int dureeDeVie, ArrayList<Arme> armes) {
+        this(name,dureeDeVie);
+        this.armes = armes;
     }
 
-    public Arme getArme() {
-        return arme;
+    public ArrayList<Arme> getArmes() {
+        return armes;
     }
 
-    public void setArme(Arme arme) {
-        this.arme = arme;
+    public void setArmes(ArrayList<Arme> arme) {
+        this.armes = arme;
+    }
+
+    public void addArme(Arme arme){
+        this.armes.add(arme);
     }
 
     public void presentation(){
         System.out.printf("mon nom est %s ,et je suis un guerrier\n",this.getName());
     }
+    //add pouvoir voler à la classe geurrier
 
+    public void voler(){
+        System.out.println("i believe i can fly");
+    }
 }

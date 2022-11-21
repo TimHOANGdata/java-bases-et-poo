@@ -1,6 +1,6 @@
 package Herritage;
 
-public class Magicien extends Personnage {
+public class Magicien extends Personnage implements EntiteVolant{
     private String baguetteMagique;
 
     public Magicien(String name, int dureeDeVie, String baguetteMagique) {
@@ -19,5 +19,10 @@ public class Magicien extends Personnage {
         System.out.printf("mon nom est %s ,et je suis un magicien\n",this.getName());
     }
     //Polymorphism de redefinition: redefinition dans les subclass
+
+    //add pouvoir voler
+    public void voler(){
+        System.out.println("i can fly using my wand");
+    }
 }
 
