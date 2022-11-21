@@ -44,17 +44,15 @@ public class Souris {
     private String couleur;
     private int age = 0;
     private int esperanceVie;
-    private final int ESPERANCE_VIE_DEFAUT = 36;
 
     private boolean clonee;
 
 
-    public Souris(double poid, String couleur, int age, boolean clonee) {
+    public Souris(double poid, String couleur) {
         this.poid = poid;
         this.couleur = couleur;
         this.age = age;
-        this.esperanceVie= ESPERANCE_VIE_DEFAUT;
-        this.clonee = clonee;
+        this.esperanceVie= 36;
         System.out.println("Une nouvelle souris!");
     }
 
@@ -70,9 +68,9 @@ public class Souris {
 
     public String toString() {
         String donnees = "";
-        if (clonee == true) {
+        if (this.clonee) {
             donnees = String.format("Une souris " + couleur + "[ clonée,] de " + age + " mois et pesant " + poid + " grammes");
-        } else if (clonee == false) {
+        } else {
             donnees = String.format("Une souris " + couleur + " de " + age + " mois et pesant " + poid + " grammes");
         }
         return donnees;
@@ -80,15 +78,14 @@ public class Souris {
 
     public String veillir() {
         this.age = age + 1;
-        if (this.clonee == true && this.age > esperanceVie / 2) {
+        if (this.clonee && this.age > esperanceVie / 2) {
             this.couleur = "vert";
         }
         return toString();
     }
     public String evolue() {
-        this.age = esperanceVie;
-        if (this.clonee == true){
-            this.couleur = "vert";
+        while(this.age < this.esperanceVie){
+            this.veillir();
         }
         return toString();
     }
