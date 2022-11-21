@@ -27,14 +27,21 @@ public abstract class Personnage { //SuperClass
     public void setDureeDeVie(int dureeDeVie) {
         this.dureeDeVie = dureeDeVie;
     }
+
+
 //    public void presentation(){
 //        System.out.printf("mon nom est %s ,et je suis un personnage\n",this.name);
 //    }
-    //dans le cas cette presentation est inutile parce qu'on a deja les presentation specifique pour chaque class,
-    // On peut definir cette method abstraite.
+    //dans le cas cette presentation est inutile parce qu'on a deja les presentation spécifique pour chaque class,
+    // On peut définir cette method abstraite.
     // Une methode abstraite ne contient pas son core.
     // Si on définit une methode abstraite dans le super class. Les subclass doit implementer la method abstraite
-    // Si on définit une methode abstraite dans une classe, cette classe doit etre abstraite aussi.
+    // Si on définit une methode abstraite dans une classe, cette classe doit être abstraite aussi.
     public abstract void presentation();
+
+
+    //abstraction: les caracteres necessares importants par rapport au probleme qu'on résout pour un objet
+    //encapsulationn : L’encapsulation est un mécanisme consistant à rassembler les données et les méthodes au sein d’une structure en cachant l’implémentation de l’objet,
+    // C’est-à-dire en empêchant l’accès aux données par un autre moyen que les services proposés
 }
 

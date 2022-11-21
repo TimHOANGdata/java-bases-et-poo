@@ -1,18 +1,18 @@
 package Herritage;
 
 public class Guerrier extends Personnage {
-    private String arme;
+    private Arme arme;
 
-    public Guerrier(String name, int dureeDeVie, String arme) {
+    public Guerrier(String name, int dureeDeVie, Arme arme) {
         super(name,dureeDeVie);
         this.arme = arme;
     }
 
-    public String getArme() {
+    public Arme getArme() {
         return arme;
     }
 
-    public void setArme(String arme) {
+    public void setArme(Arme arme) {
         this.arme = arme;
     }
 
